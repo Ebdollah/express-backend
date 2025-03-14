@@ -22,6 +22,9 @@ app.use(
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use('/',(req: Request, res: Response)=>{
+  res.send("Welcome")
+})
 app.use("/api/v1/user", userRouter);
 
 AppDataSource.initialize()
